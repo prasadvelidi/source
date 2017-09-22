@@ -17,7 +17,7 @@ typedef struct _ANT
  *    Arguments : [n] is number of ants in simulation.
  *    Returns   : None.
  *    PreReqs   : None.
- *    Caution   : Naturality in ants' movements are preserved iff the function is left unchanged.
+ *    Caution   : Naturality in ants' movements are preserved if the function is left unchanged.
  *    TestSpeed : None.
  */
 void antz(int n)
@@ -59,7 +59,7 @@ void antz(int n)
 
 					if(_x1>=0 && _x1<=639 && _y1>=0 && _y1<=479)    /* if the new coordinates make a valid point */
 					{
-						/* length of ant stays constant iff crawling a new pixel is balanced by wiping out last pixel */
+						/* length of ant stays constant if crawling a new pixel is balanced by wiping out last pixel */
 						if(ants[i].path[2*ants[i].index]!=-1 && ants[i].path[2*ants[i].index+1]!=-1)
 						      putpixel(ants[i].path[2*ants[i].index], ants[i].path[2*ants[i].index+1], 0);
 
